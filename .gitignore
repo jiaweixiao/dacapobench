@@ -69,3 +69,7 @@ benchmarks/run.sh
 
 benchmarks/META-INF/
 benchmarks/bms/tradebeans/outdat/
+
+tools/analysis/bcc/dacapo-harness.jar
+tools/analysis/bcc/dependency-reduced-pom.xml
+tools/analysis/bcc/target/

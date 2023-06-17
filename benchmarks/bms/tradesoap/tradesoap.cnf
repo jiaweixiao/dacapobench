@@ -27,6 +27,24 @@ size vlarge args "13", "630"
   output stdout  digest 0x62a56965fa2fc174cd33daa77f51a649922f5d5f,
          stderr  digest 0x9091250ce46ff1ad0f8c4b141b2ea34acac9fc0e;
 
+size evalgc13 args "13", "1500"
+  threads 1      // per available processor
+  thread-limit 1024 // see <max-pool-size> in wildfly.patch
+  output stdout  digest 0x62a56965fa2fc174cd33daa77f51a649922f5d5f,
+         stderr  digest 0x9091250ce46ff1ad0f8c4b141b2ea34acac9fc0e;
+
+size evalgc14 args "14", "1500"
+  threads 1      // per available processor
+  thread-limit 1024 // see <max-pool-size> in wildfly.patch
+  output stdout  digest 0x62a56965fa2fc174cd33daa77f51a649922f5d5f,
+         stderr  digest 0x9091250ce46ff1ad0f8c4b141b2ea34acac9fc0e;
+
+size evalgc15 args "15", "1500"
+  threads 1      // per available processor
+  thread-limit 1024 // see <max-pool-size> in wildfly.patch
+  output stdout  digest 0x62a56965fa2fc174cd33daa77f51a649922f5d5f,
+         stderr  digest 0x9091250ce46ff1ad0f8c4b141b2ea34acac9fc0e;
+
 description
   short		"Tradesoap SOAP Daytrader benchmark",
   long		"Tradesoap a SOAP version of the Daytrader benchmark from Apache. It runs over the WildFly application server.",
