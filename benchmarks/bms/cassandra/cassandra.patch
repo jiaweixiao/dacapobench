@@ -368,3 +368,25 @@ diff '--color=auto' -ur cassandra-1ba458c-pre-5.1/src/java/org/apache/cassandra/
  
          static
          {
+diff '--color=auto' -ur cassandra-1ba458c-pre-5.1/src/java/org/apache/cassandra/utils/NativeLibrary.java ../build/cassandra-1ba458c-pre-5.1/src/java/org/apache/cassandra/utils/NativeLibrary.java
+--- cassandra-1ba458c-pre-5.1/src/java/org/apache/cassandra/utils/NativeLibrary.java	2023-10-04 03:46:11.000000000 +0000
++++ ../build/cassandra-1ba458c-pre-5.1/src/java/org/apache/cassandra/utils/NativeLibrary.java	2023-10-04 06:07:45.903498175 +0000
+@@ -181,12 +181,18 @@
+ 
+     public static void tryMlockall()
+     {
++        try{
++            // Disable pin Heap in memory
++            logger.info(" Disable JNA mlockall successful");
++        }
++        /*
+         try
+         {
+             wrappedLibrary.callMlockall(MCL_CURRENT);
+             jnaLockable = true;
+             logger.info("JNA mlockall successful");
+         }
++        */
+         catch (UnsatisfiedLinkError e)
+         {
+         // this will have already been logged by CLibrary, no need to repeat it
