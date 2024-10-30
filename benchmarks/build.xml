@@ -357,7 +357,7 @@
          target: compile  all sources
          ================================= -->
     <!--target name="compile" depends="avrora,batik,biojava,cassandra,eclipse,fop,graphchi,h2,h2o,jme,jython,kafka,luindex,lusearch,pmd,spring,sunflow,tomcat,tradebeans,tradesoap,xalan,zxing"-->
-    <target name="compile" depends="h2,tradebeans,tradesoap">
+    <target name="compile" depends="h2">
         <antcall target="build.status.fail" />
         <antcall target="build.status.pass" />
     </target>
